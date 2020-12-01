@@ -8,6 +8,14 @@ The `resources` directory contains the input data for each day. These files are 
 
 The `test` directory contains unit tests. I'm experimenting with these for the first time this go-around, so I'll say more here once I have a better feel.
 
+## Stats
+
+Number of answers correct on first submission: 2/2 (100%)
+
+Highest rank for first half: 2863
+
+Highest rank for second half: 2417
+
 ## Usage
 
 This project is managed with [Leiningen](https://leiningen.org/). Running the following will download any dependencies and start a REPL:
