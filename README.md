@@ -1,6 +1,6 @@
 # advent-2020-clojure
 
-This is my code for the 2020 [Advent of Code](https://adventofcode.com/2019), all solutions in [Clojure](https://clojure.org/).
+This is my code for the 2020 [Advent of Code](https://adventofcode.com/2020), all solutions in [Clojure](https://clojure.org/).
 
 All code is under the `src` directory. Each solution-file is named `dayNN.clj` and contains both puzzle solutions for that day. These are the publically-facing functions `part-1` and `part-2`. These files are the code *exactly as I used it to solve and submit the answers*. If I revisit any of the days and try to clean up or optimize the solutions, that work will be in a separate file that will be named `dayNNbis.clj`.
 
