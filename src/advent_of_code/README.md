@@ -6,7 +6,7 @@ The numbers in parentheses in the descriptions of the files represent the rank I
 
 ## day01.clj
 
-Day 1 (--/--).
+Day 1 (2863/2417, approx. 16 minutes). This was a combinatorics problem, for which I let `clojure.math.combinatorics` do the heavy lifting of combinations. Paired it with `filter` to find the one pair that totalled 2020 and multiplied them. The second part was to find *three* numbers that totalled 2020, which just meant changing `2` to `3` in the combinatorics call.
 
 ## day02.clj
 
