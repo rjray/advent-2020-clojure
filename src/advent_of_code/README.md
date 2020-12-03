@@ -1,6 +1,6 @@
 # Breakdown of Files
 
-Here is a breakdown of the various files in this directory. Files with names of the form `dayNN.clj` represent the code actually used to solve the problems (with some tweaking done using a static analysis plug-in for Leinengen). Files with `bis` in the name are modified/tuned versions of the given original day.
+Here is a breakdown of the various files in this directory. Files with names of the form `dayNN.clj` represent the code actually used to solve the problems (with some tweaking done using a static analysis plug-in for Leinengen). Files with `bis` in the name are modified/tuned versions of the given original day. (If you see comments in a file, I can promise you they were added after the fact.)
 
 The numbers in parentheses in the descriptions of the files represent the rank I had for when my solutions were submitted and accepted.
 
@@ -20,9 +20,11 @@ I was so annoyed with myself over my poor performance on this day's puzzles that
 
 (Note that since this file is out of the usual `dayNN.clj` rotation, it doesn't run from the `core.clj` harness that those do. So I've copied the `read-input` fn here to keep it simpler.)
 
-## day03.clj
+## [day03.clj](day03.clj)
 
-Day 3 (--/--).
+Day 3 (4520/4482, approx 29 minutes). This one was much more fun than day 2 had been. I spent too much time on parsing the input into a usable data structure than I should have. Once I had part 1 done, I quickly learned that I should have parameterized the two slope values for the calculations. Which I KNEW I should have when I was writing it, but when you're in a hurry...
+
+Part 2 was pretty quick after part 1 was done, I was slowed by an overflow error stemming from forgetting that one of the new slopes could move past the end of the Y-range, which hadn't been an issue in part 1. Still, I improved my performance over day 2 and jumped up a few places on the two leaderboards I'm on (NVIDIA and Clojurians).
 
 ## day04.clj
 
