@@ -14,6 +14,12 @@ Day 1 (2863/2417, approx. 16 minutes). This was a combinatorics problem, for whi
 
 Day 2 (4900/5635, approx. 41 minutes). This wasn't NEARLY as hard as my rankings suggest. A couple of dumb typos caused me to waste nearly 15 minutes in debugging for the first part. Then my brain vapor-locked on how to do XOR and cost me time in part 2. Not happy with this day's performance.
 
+## [day02bis.clj](day02bis.clj)
+
+I was so annoyed with myself over my poor performance on this day's puzzles that I almost immediately went looking for improvement. The main improvement here is using a single regexp to get all the relevant parts of the text line. Really, after 25+ years of Perl I should have done that coming out of the gate.
+
+(Note that since this file is out of the usual `dayNN.clj` rotation, it doesn't run from the `core.clj` harness that those do. So I've copied the `read-input` fn here to keep it simpler.)
+
 ## day03.clj
 
 Day 3 (--/--).
