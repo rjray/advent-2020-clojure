@@ -1,8 +1,11 @@
 (ns advent-of-code.core
   (:require [advent-of-code.day01]
             [advent-of-code.day02]
+            [advent-of-code.day02bis]
             [advent-of-code.day03]
+            [advent-of-code.day03bis]
             [advent-of-code.day04]
+            [advent-of-code.day04bis]
             [advent-of-code.day05]
             [advent-of-code.day06]
             [advent-of-code.day07]
@@ -31,7 +34,7 @@
 
 (defn -main
   "Used to dispatch tasks from the command line.
-  
+
   lein run d01.p1"
   [part]
   (case part
@@ -39,10 +42,22 @@
     "d01.p2" (println (advent-of-code.day01/part-2 (read-input "day01.txt")))
     "d02.p1" (println (advent-of-code.day02/part-1 (read-input "day02.txt")))
     "d02.p2" (println (advent-of-code.day02/part-2 (read-input "day02.txt")))
+    "d02bis.p1" (println (advent-of-code.day02bis/part-1
+                          (read-input "day02.txt")))
+    "d02bis.p2" (println (advent-of-code.day02bis/part-2
+                          (read-input "day02.txt")))
     "d03.p1" (println (advent-of-code.day03/part-1 (read-input "day03.txt")))
     "d03.p2" (println (advent-of-code.day03/part-2 (read-input "day03.txt")))
+    "d03bis.p1" (println (advent-of-code.day03bis/part-1
+                          (read-input "day03.txt")))
+    "d03bis.p2" (println (advent-of-code.day03bis/part-2
+                          (read-input "day03.txt")))
     "d04.p1" (println (advent-of-code.day04/part-1 (read-input "day04.txt")))
     "d04.p2" (println (advent-of-code.day04/part-2 (read-input "day04.txt")))
+    "d04bis.p1" (println (advent-of-code.day04bis/part-1
+                          (read-input "day04.txt")))
+    "d04bis.p2" (println (advent-of-code.day04bis/part-2
+                          (read-input "day04.txt")))
     "d05.p1" (println (advent-of-code.day05/part-1 (read-input "day05.txt")))
     "d05.p2" (println (advent-of-code.day05/part-2 (read-input "day05.txt")))
     "d06.p1" (println (advent-of-code.day06/part-1 (read-input "day06.txt")))

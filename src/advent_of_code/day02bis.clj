@@ -1,6 +1,5 @@
 (ns advent-of-code.day02bis
-  (:require [advent-of-code.core :refer [read-input]]
-            [clojure.string :as str]))
+  (:require [clojure.string :as str]))
 
 (defn- valid-password [line]
   (let [[_ lo hi [ch] pw] (re-find #"(\d+)-(\d+)\s(\w):\s(\w+)" line)
@@ -10,9 +9,8 @@
 
 (defn part-1
   "Day 02 Part 1"
-  []
-  (->> "day02.txt"
-       read-input
+  [input]
+  (->> input
        str/split-lines
        (filter valid-password)
        (count)))
@@ -27,9 +25,8 @@
 
 (defn part-2
   "Day 02 Part 2"
-  []
-  (->> "day02.txt"
-       read-input
+  [input]
+  (->> input
        str/split-lines
        (filter valid-password2)
        (count)))
