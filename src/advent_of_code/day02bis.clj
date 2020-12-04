@@ -1,9 +1,6 @@
 (ns advent-of-code.day02bis
-  (:require [clojure.string :as str]))
-
-(defn read-input
-  [day]
-  (slurp (clojure.java.io/resource day)))
+  (:require [advent-of-code.core :refer [read-input]]
+            [clojure.string :as str]))
 
 (defn- valid-password [line]
   (let [[_ lo hi [ch] pw] (re-find #"(\d+)-(\d+)\s(\w):\s(\w+)" line)
