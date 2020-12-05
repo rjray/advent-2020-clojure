@@ -7,6 +7,7 @@
             [advent-of-code.day04]
             [advent-of-code.day04bis]
             [advent-of-code.day05]
+            [advent-of-code.day05bis]
             [advent-of-code.day06]
             [advent-of-code.day07]
             [advent-of-code.day08]
@@ -60,6 +61,10 @@
                           (read-input "day04.txt")))
     "d05.p1" (println (advent-of-code.day05/part-1 (read-input "day05.txt")))
     "d05.p2" (println (advent-of-code.day05/part-2 (read-input "day05.txt")))
+    "d05bis.p1" (println (advent-of-code.day05bis/part-1
+                          (read-input "day05.txt")))
+    "d05bis.p2" (println (advent-of-code.day05bis/part-2
+                          (read-input "day05.txt")))
     "d06.p1" (println (advent-of-code.day06/part-1 (read-input "day06.txt")))
     "d06.p2" (println (advent-of-code.day06/part-2 (read-input "day06.txt")))
     "d07.p1" (println (advent-of-code.day07/part-1 (read-input "day07.txt")))

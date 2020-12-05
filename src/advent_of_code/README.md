@@ -38,11 +38,15 @@ After sleeping on it, I'm more annoyed with the day 4 code than I was in the mom
 
 (Also, at this point I decided to just add the `bis` files to the `advent-of-code.core` run-harness to make it easier to run the tests.)
 
-## day05.clj
+## [day05.clj](day05.clj)
 
 Day 5 (5181/5400, approx. 42 minutes). Overall better than yesterday, though I struggled with the wording of part 2, and that delayed me in getting it done. Once I understood it, it was actually quite easy (but I'd already paid a time-penalty). Binary partitioning is the theme of the day, and while I'll commit the code as-is, I'll be returning to it to make it shorter. I replicated a lot of code for the sake of expediency.
 
 Side note: for the second part of the problem, the example input was of no use for testing the solution before I tried running it on the actual input data. That made submitting my part 2 answer a little nerve-wracking...
+
+## [day05bis.clj](day05bis.clj)
+
+In fact, this is the first time I didn't even want to wait to make the improved version. This reduces the dual partition fns to a single one, and (more importantly) gets rid of a lot of redundant/unnecessary steps.
 
 ## day06.clj
 
