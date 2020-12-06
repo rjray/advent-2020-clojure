@@ -48,9 +48,11 @@ Side note: for the second part of the problem, the example input was of no use f
 
 In fact, this is the first time I didn't even want to wait to make the improved version. This reduces the dual partition fns to a single one, and (more importantly) gets rid of a lot of redundant/unnecessary steps.
 
-## day06.clj
+## [day06.clj](day06.clj)
 
-Day 6 (--/--).
+Day 6 (3664/3373, approx. 18 minutes).
+
+Boy, was it nice to have one where I didn't vapor-lock at any point. If I could type faster I'd have gotten a better position. The key to this one (both parts) stems from Clojure supporting sets as first-class datatypes. I'm not even sure I can clean this one up, so there might not be a `day06bis.clj`.
 
 ## day07.clj
 
