@@ -54,9 +54,9 @@ Day 6 (3664/3373, approx. 18 minutes).
 
 Boy, was it nice to have one where I didn't vapor-lock at any point. If I could type faster I'd have gotten a better position. The key to this one (both parts) stems from Clojure supporting sets as first-class datatypes. I'm not even sure I can clean this one up, so there might not be a `day06bis.clj`.
 
-## day07.clj
+## [day07.clj](day07.clj)
 
-Day 7 (--/--).
+Day 7 (5162/4001, approx. 1 hour 11 minutes). Nifty... our first real search problem. This was a sort of graph-search variant, I *think*. To be fair, I'm not quite sure. But I was able to solve both parts with minor recursive solutions. Spent about 15 minutes of the time getting a good parsing of the input data, and about 45 minutes trying to solve the first part. I had some misunderstanding about `if`-clauses and how they'd work with things like `filter`. Part 2 was actually considerably easier for me, taking only about 10-11 minutes of the total time.
 
 ## day08.clj
 
