@@ -20,7 +20,6 @@
                {})))
 
 (defn- can-contain? [rules choice target]
-  ;;(prn "can-contain:" choice (rules choice))
   (cond
     (empty? (rules choice)) false
     ((rules choice) target) true
