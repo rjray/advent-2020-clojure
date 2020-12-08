@@ -5,7 +5,8 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/math.numeric-tower "0.0.4"]
-                 [org.clojure/math.combinatorics "0.1.6"]]
+                 [org.clojure/math.combinatorics "0.1.6"]
+                 [criterium "0.4.6"]]
   :plugins [[lein-kibit "0.1.8"]]
   :main advent-of-code.core
   :repl-options {:init-ns advent-of-code.core})
