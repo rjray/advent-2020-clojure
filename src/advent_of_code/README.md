@@ -64,6 +64,10 @@ Day 8 (4956/4216, approx. 35 minutes). This one was outright fun. I got a slight
 
 Might clean this up some tomorrow, but I'm not really dissatisfied with the code as it is.
 
+## [day08bis.clj](day08bis.clj)
+
+Went ahead and did some low-level tweaking here, but didn't really see any speed-up. I do think that using a keyword lookup for the `filter` predicate looks cleaner than a string comparison did, at least. I also adjusted `parse-instructions` to return the result as a vector so that it isn't being converted to a vector in two other places, but I didn't expect that to save any real time. Likewise, I added `distinct` to the pipeline in part 2 (between `make-variants` and `map`), but it also had no noticeable effect on run-time.
+
 ## day09.clj
 
 Day 9 (--/--).
