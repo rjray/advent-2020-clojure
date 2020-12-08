@@ -58,9 +58,11 @@ Boy, was it nice to have one where I didn't vapor-lock at any point. If I could 
 
 Day 7 (5162/4001, approx. 1 hour 11 minutes). Nifty... our first real search problem. This was a sort of graph-search variant, I *think*. To be fair, I'm not quite sure. But I was able to solve both parts with minor recursive solutions. Spent about 15 minutes of the time getting a good parsing of the input data, and about 45 minutes trying to solve the first part. I had some misunderstanding about `if`-clauses and how they'd work with things like `filter`. Part 2 was actually considerably easier for me, taking only about 10-11 minutes of the total time.
 
-## day08.clj
+## [day08.clj](day08.clj)
 
-Day 8 (--/--).
+Day 8 (4956/4216, approx. 35 minutes). This one was outright fun. I got a slightly-late start due to being out looking at a Christmas lights display, so the approximate time is based on when I actually started. Part 1 was to emulate a simple three-instruction machine until it got into a loop. That was quite easy using a `set` instance to track the "lines" that had been visited. Part 2 was not really that much harder, but an off-by-one error slowed me down. For part 2, you had to change exactly one instruction in order to prevent the infinite loop. You had to change either a `jmp` to a `nop` or vice-versa. Here, the immutable nature of Clojure data-types serves you well, as you can make changes within a vector without altering the underlying vector. I used this to make *N* copies of the code with one change, then ran all of them until one comes back without getting into a loop.
+
+Might clean this up some tomorrow, but I'm not really dissatisfied with the code as it is.
 
 ## day09.clj
 

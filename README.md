@@ -10,7 +10,7 @@ The `test` directory contains unit tests. I'm experimenting with these for the f
 
 ## Stats
 
-Number of answers correct on first submission: 14/14 (100%)
+Number of answers correct on first submission: 16/16 (100%)
 
 Highest rank for first half: 2863
 
