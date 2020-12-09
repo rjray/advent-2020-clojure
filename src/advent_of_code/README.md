@@ -68,9 +68,9 @@ Might clean this up some tomorrow, but I'm not really dissatisfied with the code
 
 Went ahead and did some low-level tweaking here, but didn't really see any speed-up. I do think that using a keyword lookup for the `filter` predicate looks cleaner than a string comparison did, at least. I also adjusted `parse-instructions` to return the result as a vector so that it isn't being converted to a vector in two other places, but I didn't expect that to save any real time. Likewise, I added `distinct` to the pipeline in part 2 (between `make-variants` and `map`), but it also had no noticeable effect on run-time.
 
-## day09.clj
+## [day09.clj](day09.clj)
 
-Day 9 (--/--).
+Day 9 (7279/6149, approx. 45 minutes). Ouch. Day 9, and I got my first incorrect submission. On the first part, no less. An off-by-one error bit me, and it didn't keep the test-data from producing the correct sample answer. Hence the worse-than-usual ranking for part 1. Once I found the problem it was fine, the second submission passed. Part 2 of the problem was actually much easier, despite the fact that I took a brute-force approach. I'm quite sure there is a faster, more-elegant solution to part 2. I may look at some other players' solutions and see.
 
 ## day10.clj
 
