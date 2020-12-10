@@ -78,6 +78,8 @@ Day 10 (4908/7163, approx. 2 hours 37 minutes). Part 1 is deceptively easy. As i
 
 But part 2...? I spent over two hours on it. I finally got something that worked, but along the way I had two different iterations of a solution that ran for over 20 minutes each without returning a value. I was furiously reading up on memoization and trying to apply that here. I finally got something that works, but I will admit that I helped myself along by looking at a few other completed solutions. I feel like I learned a *LOT* from part 2, but it's painful to have spent this much time so early in the challenge...
 
+**Edit**: I want to credit [Vincent Cantin](https://github.com/green-coder) for the solution that ended up influencing my part 2 solution the most. I was already doing something very similar to his code, but I had placed `memoize` in the wrong place. Understanding the differences between his solution and my initial attempts was very educational.
+
 ## day11.clj
 
 Day 11 (--/--).

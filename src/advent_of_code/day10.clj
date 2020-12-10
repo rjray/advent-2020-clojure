@@ -22,6 +22,10 @@
        count-gaps
        (mult 1 3)))
 
+;; Getting this right is due in large part to seeing how Vincent Cantin
+;; solved part 2.
+;; (https://github.com/green-coder/advent-of-code-2020/blob/master/src/aoc/day_10.clj).
+
 (defn- make-solver [nums]
   (def solve
     (let [maxidx (dec (count nums))]
