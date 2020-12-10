@@ -80,6 +80,10 @@ But part 2...? I spent over two hours on it. I finally got something that worked
 
 **Edit**: I want to credit [Vincent Cantin](https://github.com/green-coder) for the solution that ended up influencing my part 2 solution the most. I was already doing something very similar to his code, but I had placed `memoize` in the wrong place. Understanding the differences between his solution and my initial attempts was very educational.
 
+## [day10bis.clj](day10bis.clj)
+
+I didn't change much here. In part 1, I replaced the use of `(group-by identity ...)` with `(frequencies ...)`. This is maybe faster, but definitely more concise. In part 2, I mostly moved a let-form up one level since it didn't need to be re-evaluated in the recursive calls.
+
 ## day11.clj
 
 Day 11 (--/--).
