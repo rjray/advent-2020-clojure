@@ -84,6 +84,12 @@ But part 2...? I spent over two hours on it. I finally got something that worked
 
 I didn't change much here. In part 1, I replaced the use of `(group-by identity ...)` with `(frequencies ...)`. This is maybe faster, but definitely more concise. In part 2, I mostly moved a let-form up one level since it didn't need to be re-evaluated in the recursive calls.
 
+## [day10bench.clj](day10bench.clj)
+
+This is a special file, not tied in to the core (so it can't be run from `lein`). Earlier today I was reading the [day 10 solutions mega-thread](https://old.reddit.com/r/adventofcode/comments/ka8z8x/2020_day_10_solutions/) on reddit and came across a comment thread in which someone demonstrated two different dynamic programming approaches to part 2. Both promised O(n) complexity. So I was really curious about this and implemented both of them in Clojure. This file consists of those two DP solutions along with my solution (the one influenced by Vincent Cantin). It reads the day 10 data and pre-processes it into a vector, and uses this vector to test and benchmark each of the three. The benchmarking is done with the [Criterium](https://github.com/hugoduncan/criterium) package for Clojure.
+
+Much to my surprise, the original (non-DP, recursive) solution outperformed both of the DP implementations. I'd love to hear from any more-experienced Clojure devs who look at this and can see any improvements.
+
 ## day11.clj
 
 Day 11 (--/--).
