@@ -74,7 +74,9 @@ Day 9 (7279/6149, approx. 45 minutes). Ouch. Day 9, and I got my first incorrect
 
 ## day10.clj
 
-Day 10 (--/--).
+Day 10 (4908/7163, approx. 2 hours 37 minutes). Part 1 is deceptively easy. As in, once I realized what it was it took about 2 minutes to code. But it took too long to get to that point.
+
+But part 2...? I spent over two hours on it. I finally got something that worked, but along the way I had two different iterations of a solution that ran for over 20 minutes each without returning a value. I was furiously reading up on memoization and trying to apply that here. I finally got something that works, but I will admit that I helped myself along by looking at a few other completed solutions. I feel like I learned a *LOT* from part 2, but it's painful to have spent this much time so early in the challenge...
 
 ## day11.clj
 
