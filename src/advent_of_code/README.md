@@ -72,7 +72,7 @@ Went ahead and did some low-level tweaking here, but didn't really see any speed
 
 Day 9 (7279/6149, approx. 45 minutes). Ouch. Day 9, and I got my first incorrect submission. On the first part, no less. An off-by-one error bit me, and it didn't keep the test-data from producing the correct sample answer. Hence the worse-than-usual ranking for part 1. Once I found the problem it was fine, the second submission passed. Part 2 of the problem was actually much easier, despite the fact that I took a brute-force approach. I'm quite sure there is a faster, more-elegant solution to part 2. I may look at some other players' solutions and see.
 
-## day10.clj
+## [day10.clj](day10.clj)
 
 Day 10 (4908/7163, approx. 2 hours 37 minutes). Part 1 is deceptively easy. As in, once I realized what it was it took about 2 minutes to code. But it took too long to get to that point.
 
@@ -90,9 +90,13 @@ This is a special file, not tied in to the core (so it can't be run from `lein`)
 
 Much to my surprise, the original (non-DP, recursive) solution outperformed both of the DP implementations. I'd love to hear from any more-experienced Clojure devs who look at this and can see any improvements.
 
-## day11.clj
+## [day11.clj](day11.clj)
 
-Day 11 (--/--).
+Day 11 (4241/4454, approx. 1 hour 29 minutes). For today, the theme was [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). Part 1 was basically that with an added constraint of some cells being kept empty permanently. After spending too long on parsing the input map (which defined which cells were or were not in use), I was able to solve it fairly easily. Funny-enough, there was a Life-esque day last year, but (not surprisingly) this was so different that I couldn't really reuse any of that code.
+
+Part 2 changed the rule in subtle-but-significant ways. Instead of counting *adjacent* cells, you counted *visible* in-use cells in the eight directions. As in, if the upper-left cell was not in use then you go to the next one on that slope/direction until you find one that is in-use. Then you count it as either empty or not for the overall count. Funny-enough, part 2 took less time to complete than part 1 despite a subtle bug that took a while to find and resolve.
+
+This was a puzzle in which Clojure's immutable data really shines. Being able to compute a new "floor" for each iteration without having to worry about the current one getting corrupted was invaluable. I'm not happy with the 105-line length of the code, though. In the name of haste I duplicated a lot of code, since it was faster to copy a fn and change one or two bits than to re-write the original to be flexible. There will definitely be a (shorter) `day11bis.clj` later on.
 
 ## day12.clj
 
