@@ -1,6 +1,6 @@
 # Breakdown of Files
 
-Jump to day: [1](#day01clj)|[2](#day02clj)|[3](#day03clj)|[4](#day04clj)|[5](#day05clj)|[6](#day06clj)|[7](#day07clj)|[8](#day08clj)|[9](#day09clj)|[10](#day10clj)|[11](#day11clj)|[12](#day12clj)|[13](#day13clj)|[14](#day14clj)|[15](#day15clj)|[16](#day16clj)|[17](#day17clj)|[18](#day18clj)|[19](#day19clj)|[20](#day20clj)|[21](#day21clj)|[22](#day22clj)|[23](#day23clj)|[24](#day24clj)|[25](#day25clj)
+Jump to day: [1](#day01clj)&nbsp;|&nbsp;[2](#day02clj)&nbsp;|&nbsp;[3](#day03clj)&nbsp;|&nbsp;[4](#day04clj)&nbsp;|&nbsp;[5](#day05clj)&nbsp;|&nbsp;[6](#day06clj)&nbsp;|&nbsp;[7](#day07clj)&nbsp;|&nbsp;[8](#day08clj)&nbsp;|&nbsp;[9](#day09clj)&nbsp;|&nbsp;[10](#day10clj)&nbsp;|&nbsp;[11](#day11clj)&nbsp;|&nbsp;[12](#day12clj)&nbsp;|&nbsp;[13](#day13clj)&nbsp;|&nbsp;[14](#day14clj)&nbsp;|&nbsp;[15](#day15clj)&nbsp;|&nbsp;[16](#day16clj)&nbsp;|&nbsp;[17](#day17clj)&nbsp;|&nbsp;[18](#day18clj)&nbsp;|&nbsp;[19](#day19clj)&nbsp;|&nbsp;[20](#day20clj)&nbsp;|&nbsp;[21](#day21clj)&nbsp;|&nbsp;[22](#day22clj)&nbsp;|&nbsp;[23](#day23clj)&nbsp;|&nbsp;[24](#day24clj)&nbsp;|&nbsp;[25](#day25clj)
 
 Here is a breakdown of the various files in this directory. Files with names of the form `dayNN.clj` represent the code actually used to solve the problems (with some tweaking done using a static analysis plug-in for Leinengen). Files with `bis` in the name are modified/tuned versions of the given original day. (If you see comments in a file, I can promise you they were added after the fact.)
 
