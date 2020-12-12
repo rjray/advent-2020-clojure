@@ -114,6 +114,10 @@ At this point, I'm starting to get a clearer idea of what I should have already 
 
 Though only 71 lines, I feel like the solution can be shorter and cleaner. I'll do a `day12bis.clj` later, after I've gone back and tuned day 11's code.
 
+## [day12bis.clj](day12bis.clj)
+
+To my surprise, I wasn't really able to shorten this very much. I replaced `cond` with `case` in a few places, which is a tiny bit faster, but I'm not sure that there's much difference overall. Looking back at it, I'm already pretty happy with my routines for doing turns (both part 1 and part 2). Not much else was that drastically different between the two parts.
+
 ## day13.clj
 
 Day 13 (--/--).
