@@ -100,6 +100,10 @@ Part 2 changed the rule in subtle-but-significant ways. Instead of counting *adj
 
 This was a puzzle in which Clojure's immutable data really shines. Being able to compute a new "floor" for each iteration without having to worry about the current one getting corrupted was invaluable. I'm not happy with the 105-line length of the code, though. In the name of haste I duplicated a lot of code, since it was faster to copy a fn and change one or two bits than to re-write the original to be flexible. There will definitely be a (shorter) `day11bis.clj` later on.
 
+## [day11bis.clj](day11bis.clj)
+
+I wasn't able to get much performance improvement out of this, but I was able to trim 26 lines by removing redundant code. I also replaced a couple of `cond` forms with `case`, which did get a small speed-up. I imagine there is a way to compute this (a dynamic programming approach, maybe) that doesn't involve actually iterating the field. I may look into that later, but for now I'll take these improvements.
+
 ## [day12.clj](day12.clj)
 
 Day 12 (4023/3351, approx. 52 minutes). This one had some interesting elements to it. In part 1, you just "move" a ferry boat around based on a stream of instructions. You have to keep track of which direction it is currently facing for the sake of "forward" movement and turns. Then calculate the Manhattan distance of the final point. Took about 30 of the 52 minutes, as I let myself get caught up in how to best "turn" the boat some multiple of 90 degrees in either a left or right direction.
