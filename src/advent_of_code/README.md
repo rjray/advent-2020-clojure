@@ -100,9 +100,15 @@ Part 2 changed the rule in subtle-but-significant ways. Instead of counting *adj
 
 This was a puzzle in which Clojure's immutable data really shines. Being able to compute a new "floor" for each iteration without having to worry about the current one getting corrupted was invaluable. I'm not happy with the 105-line length of the code, though. In the name of haste I duplicated a lot of code, since it was faster to copy a fn and change one or two bits than to re-write the original to be flexible. There will definitely be a (shorter) `day11bis.clj` later on.
 
-## day12.clj
+## [day12.clj](day12.clj)
 
-Day 12 (--/--).
+Day 12 (4023/3351, approx. 52 minutes). This one had some interesting elements to it. In part 1, you just "move" a ferry boat around based on a stream of instructions. You have to keep track of which direction it is currently facing for the sake of "forward" movement and turns. Then calculate the Manhattan distance of the final point. Took about 30 of the 52 minutes, as I let myself get caught up in how to best "turn" the boat some multiple of 90 degrees in either a left or right direction.
+
+Part 2 threw a slight curve-ball at it. Now, the position that moves is a waypoint, and only one of the commands actually moves the boat based on the current position of the waypoint relative to the boat. This one took a little less time because the only tricky part was implementing rotation of the waypoint for the turn commands. For part 2 I got my best finishing position since day 1.
+
+At this point, I'm starting to get a clearer idea of what I should have already ready to go for things in the future. I find I'm losing most of my up-front time in trying to get a good parse of the input data. I think that having a library of some of the more typical formats pre-canned would help me.
+
+Though only 71 lines, I feel like the solution can be shorter and cleaner. I'll do a `day12bis.clj` later, after I've gone back and tuned day 11's code.
 
 ## day13.clj
 
