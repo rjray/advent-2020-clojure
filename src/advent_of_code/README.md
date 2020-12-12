@@ -118,54 +118,54 @@ Though only 71 lines, I feel like the solution can be shorter and cleaner. I'll 
 
 To my surprise, I wasn't really able to shorten this very much. I replaced `cond` with `case` in a few places, which is a tiny bit faster, but I'm not sure that there's much difference overall. Looking back at it, I'm already pretty happy with my routines for doing turns (both part 1 and part 2). Not much else was that drastically different between the two parts.
 
-## day13.clj
+## [day13.clj](day13.clj)
 
 Day 13 (--/--).
 
-## day14.clj
+## [day14.clj](day14.clj)
 
 Day 14 (--/--).
 
-## day15.clj
+## [day15.clj](day15.clj)
 
 Day 15 (--/--).
 
-## day16.clj
+## [day16.clj](day16.clj)
 
 Day 16 (--/--).
 
-## day17.clj
+## [day17.clj](day17.clj)
 
 Day 17 (--/--).
 
-## day18.clj
+## [day18.clj](day18.clj)
 
 Day 18 (--/--).
 
-## day19.clj
+## [day19.clj](day19.clj)
 
 Day 19 (--/--).
 
-## day20.clj
+## [day20.clj](day20.clj)
 
 Day 20 (--/--).
 
-## day21.clj
+## [day21.clj](day21.clj)
 
 Day 21 (--/--).
 
-## day22.clj
+## [day22.clj](day22.clj)
 
 Day 22 (--/--).
 
-## day23.clj
+## [day23.clj](day23.clj)
 
 Day 23 (--/--).
 
-## day24.clj
+## [day24.clj](day24.clj)
 
 Day 24 (--/--).
 
-## day25.clj
+## [day25.clj](day25.clj)
 
 Day 25 (--/--).
