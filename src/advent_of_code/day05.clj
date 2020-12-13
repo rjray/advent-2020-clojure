@@ -6,7 +6,7 @@
     (let [gap (/ (+ lo hi 1) 2)]
       (cond
         (nil? part) lo
-        (= part \F) (recur parts lo (- gap 1))
+        (= part \F) (recur parts lo (dec gap))
         (= part \B) (recur parts gap hi)))))
 
 (defn- bin-partition-seats [parts]
@@ -14,7 +14,7 @@
     (let [gap (/ (+ lo hi 1) 2)]
       (cond
         (nil? part) lo
-        (= part \L) (recur parts lo (- gap 1))
+        (= part \L) (recur parts lo (dec gap))
         (= part \R) (recur parts gap hi)))))
 
 (defn- get-id [pass]

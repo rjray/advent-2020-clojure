@@ -4,8 +4,7 @@
             [clojure.math.numeric-tower :as math]))
 
 (defn- process-input [input]
-  (->> input
-       str/split-lines))
+  (str/split-lines input))
 
 (defn- content [lines]
   (list (Integer/parseInt (first lines))

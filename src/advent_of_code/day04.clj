@@ -60,7 +60,7 @@
        (valid-pid? (pp "pid"))))
 
 (defn- count-really-valid [passports]
-  (count (filter #(data-valid? %) passports)))
+  (count (filter data-valid? passports)))
 
 (defn part-2
   "Day 04 Part 2"
