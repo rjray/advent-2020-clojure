@@ -56,7 +56,7 @@
       \F      (recur moves (move-by-waypoint pos way value) way)
       (\L \R) (recur moves pos (turn-waypoint way action value))
       ;; default
-      (recur moves pos (adjust way action value)))))
+      (recur moves pos (move-point way action value)))))
 
 (defn part-2
   "Day 12 Part 2"
