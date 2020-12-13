@@ -120,7 +120,9 @@ To my surprise, I wasn't really able to shorten this very much. I replaced `cond
 
 ## [day13.clj](day13.clj)
 
-Day 13 (--/--).
+Day 13 (5070/2144, approx. 1 hour 21 minutes). Well. Today was interesting. Firstly, it didn't take me *that* long to finish part 1, it was just pretty simple so lots of people got in ahead of me.
+
+But part 2 earned it's extra time. The theme of the day was, apparently, the [Chinese Remainder Theorem](https://en.wikipedia.org/wiki/Chinese_remainder_theorem). I'd never heard of this, so it wasn't until I caved and went to reddit that I saw everyone mentioning it. So I left reddit and looked it up, only to find nothing but heavy mathematical notation. I went looking for a simple implementation that I could translate to Clojure, and finally found a pretty succint one in Python. But along the path to this, I wasted time on LCM and other things that turned out to have nothing to do with the solution.
 
 ## [day14.clj](day14.clj)
 
