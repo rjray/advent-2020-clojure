@@ -132,6 +132,10 @@ In part 2, I made two rookie mistakes, one AoC mistake and one Clojure. The AoC 
 
 **Note**: For this day, the example input data was different between parts 1 and 2, so the "test" file for this day was never updated to be used for part 2. And the example data that got committed was for part 2, so the test file for this day won't work for either part...
 
+## [day14bis.clj](day14bis.clj)
+
+I didn't like the fact that the code was over 100 lines long, so I tried to shorten it. I trimmed 13 lines (down to 94) and got a speed-up of about 20% in the run-time of part 2. I do like parts of the second solution a little better as a result of this. I'm using strings for the addresses rather than vectors, and the way I fill in the X's in a post-masked address is cleaner and faster. There are probably more ways to shorten it still.
+
 ## [day15.clj](day15.clj)
 
 Day 15 (--/--).
