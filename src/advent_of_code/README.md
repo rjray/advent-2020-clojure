@@ -126,7 +126,9 @@ But part 2 earned it's extra time. The theme of the day was, apparently, the [Ch
 
 ## [day14.clj](day14.clj)
 
-Day 14 (--/--).
+Day 14 (3241/3076, approx. 1 hour 14 minutes). First part was pretty straightforward, it shouldn't have taken me the 35 minutes it did. I vapor-locked on how to best turn a decimal number into a vector of 36 (padded) binary digits. I'm not even sure that the way I did it is very clean. But I got the start and moved on.
+
+In part 2, I made two rookie mistakes, one AoC mistake and one Clojure. The AoC rookie mistake was that I didn't read the description of part 2 closely enough, and my modified masking fn was incorrect from the outset. But the Clojure error actually bothers me more: I had nested `reduce` forms, and the inner one was returning it's computed result rather than adding it to the running list with `cons` like it should have. That was just silly of me. And I'm pretty sure there are better ways to do this part than what I've written, but it got the answer right on the first submit so I'll take it.
 
 ## [day15.clj](day15.clj)
 
