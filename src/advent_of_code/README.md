@@ -138,7 +138,11 @@ I didn't like the fact that the code was over 100 lines long, so I tried to shor
 
 ## [day15.clj](day15.clj)
 
-Day 15 (--/--).
+Day 15 (4291/3393, approx. 49 minutes). Both parts of this are solved with a brute-force algorithm. And I don't know if I'll bother going back to refine it once I've read some other solutions on reddit. But I'm rather disappointed in myself today, because I got my second wrong submission for a really stupid reason: I hard-coded a number in the algorithm that worked on all the test data-sets but not on the real data. You never *never* **NEVER** hard-code a part of your algorithm.
+
+To make it even more frustrating, when I tried running part 2 within a CIDER-driven REPL, it locked up my machine and nearly crashed it. I was able to kill it when it started to thrash, as that slowed it a bit. When I ran it again in an ordinary run (outside of a REPL and/or CIDER), it produced the (correct) answer within a few seconds.
+
+This was not my day.
 
 ## [day16.clj](day16.clj)
 
