@@ -126,7 +126,7 @@ But part 2 earned it's extra time. The theme of the day was, apparently, the [Ch
 
 ## [day14.clj](day14.clj)
 
-Day 14 (3241/3076, approx. 1 hour 14 minutes). First part was pretty straightforward, it shouldn't have taken me the 35 minutes it did. I vapor-locked on how to best turn a decimal number into a vector of 36 (padded) binary digits. I'm not even sure that the way I did it is very clean. But I got the start and moved on.
+Day 14 (3241/3076, approx. 1 hour 14 minutes). First part was pretty straightforward, it shouldn't have taken me the 35 minutes it did. I vapor-locked on how to best turn a decimal number into a vector of 36 (padded) binary digits. I'm not even sure that the way I did it is very clean. But I got the star and moved on.
 
 In part 2, I made two rookie mistakes, one AoC mistake and one Clojure. The AoC rookie mistake was that I didn't read the description of part 2 closely enough, and my modified masking fn was incorrect from the outset. But the Clojure error actually bothers me more: I had nested `reduce` forms, and the inner one was returning it's computed result rather than adding it to the running list with `cons` like it should have. That was just silly of me. And I'm pretty sure there are better ways to do this part than what I've written, but it got the answer right on the first submit so I'll take it.
 
@@ -140,13 +140,17 @@ I didn't like the fact that the code was over 100 lines long, so I tried to shor
 
 Day 15 (4291/3393, approx. 49 minutes). Both parts of this are solved with a brute-force algorithm. And I don't know if I'll bother going back to refine it once I've read some other solutions on reddit. But I'm rather disappointed in myself today, because I got my second wrong submission for a really stupid reason: I hard-coded a number in the algorithm that worked on all the test data-sets but not on the real data. You never *never* **NEVER** hard-code a part of your algorithm.
 
-To make it even more frustrating, when I tried running part 2 within a CIDER-driven REPL, it locked up my machine and nearly crashed it. I was able to kill it when it started to thrash, as that slowed it a bit. When I ran it again in an ordinary run (outside of a REPL and/or CIDER), it produced the (correct) answer within a few seconds.
+To make it even more frustrating, when I tried running part 2 within a CIDER-driven REPL, it locked up my machine and nearly crashed it. I was able to kill it when it started to thrash, as that slowed it a bit. When I ran it again in an ordinary run (outside of a REPL and/or CIDER), it produced the (correct) answer within forty seconds or so.
 
 This was not my day.
 
 ## [day16.clj](day16.clj)
 
-Day 16 (--/--).
+Day 16 (3212/3883, approx. 1 hour 49 minutes). Parsing can be a pain, especially when the input has distinctly different sections. After getting a working parse, part 1 was pretty straightforward to do using sets. I finished it in under half an hour (most of which was the parser).
+
+Part 2 was a challenge. It's some sort of search algorithm, and I don't know if I did the "right" thing or if what I did counts as brute force. But I got the right answer, so I'll take it.
+
+The code is sitting at 116 lines, so I'll surely try to improve it later. Also, the unit-test file is worthless since the data had to change between parts 1 and 2, and the test-data for part 2 couldn't actually generate an answer.
 
 ## [day17.clj](day17.clj)
 
