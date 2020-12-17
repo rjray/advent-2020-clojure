@@ -12,9 +12,9 @@ The `test` directory contains unit tests. I'm experimenting with these for the f
 
 Number of answers correct on first submission: 30/32 (93.75%)
 
-Highest rank for first half: 2863 (day 1)
+Highest finish for first half: 2433 (day 17)
 
-Highest rank for second half: 2144 (day 13)
+Highest finish for second half: 2144 (day 13)
 
 ## Usage
 

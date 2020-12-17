@@ -154,7 +154,11 @@ The code is sitting at 116 lines, so I'll surely try to improve it later. Also, 
 
 ## [day17.clj](day17.clj)
 
-Day 17 (--/--).
+Day 17 (2433/2409, approx. 1 hour 7 minutes). We got to do Conway's Game of Life again. Only, in three dimensions! I really *must* get better at building complex data structures in Clojure. The majority of my part 1 time was in getting the 3-dimensional space correctly initialized. After that, I was able to crib a lot of code from the way I had done GoL on day 11. Mind you, this isn't fast. It's slow as hell. But it got the right answer on the first submission.
+
+Part 2... did I say *three* dimensions? How about **four** dimensions? Let's play GoL with hypercubes! This was actually one of the easiest part-2's for me yet. Admittedly, in the name of haste I just copied the relevant fn's from part 1 and modified them for 4D. Thus, the code is 125 lines long. And if I thought the 3D version was slow...! But I also got a first-shot correct answer and I'm happy totake it.
+
+Sitting here typing this up, I think I have an idea on how to do this without looping over the entire X × Y × Z (× W) space. I'll try that tomorrow, after some sleep...
 
 ## [day18.clj](day18.clj)
 
