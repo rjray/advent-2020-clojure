@@ -160,6 +160,14 @@ Part 2... did I say *three* dimensions? How about **four** dimensions? Let's pla
 
 Sitting here typing this up, I think I have an idea on how to do this without looping over the entire X × Y × Z (× W) space. I'll try that tomorrow, after some sleep...
 
+## [day17bis.clj](day17bis.clj)
+
+I sat down to try out what I thought was surely a novel approach to this. Out of curiousity, though, I looked a few of the other Clojure solutions posted to the Slack. Turns out my approach isn't that novel. In fact, my approach would have been less efficient than the first one I looked at. The first one I looked at was the solution from Aleksandr Zhuravlёv ([here](https://github.com/zelark/AoC-2020/blob/master/src/zelark/aoc_2020/day_17.clj)), and it is quite elegant. Where I was planning to use an approach similar to an A* search, zelark's take on it was much more compact. In fact, the only thing here that I've added to his original is that I use a generator to make the "neighbors" function for an arbitrary number of dimensions. So there is just the one generator, used twice with 3 or 4 dimensions.
+
+I particularly like his `step` function, and the approach to determining the next generation of cells. Where I would have had a "frontier" of cells to examine that would have included all the same cells he examines, I had planned to treat each one to an independant evaluation of counting neighbors. Instead, he uses the `frequencies` primitive on a list of the candidate cells *with duplicates* in order to determine for each cell how many living neighbors it currently has.
+
+Both my search-based approach and this one have the same drawback, however: it would be very difficult to detect oscillating patterns in the field as a part of detecting cycles. Fortunately, for the sake of the Advent challenge we were only tasked with running the simulation a fixed number of steps and then counting the living cells. Which this approach does in under 1 second for the 4-dimensional case.
+
 ## [day18.clj](day18.clj)
 
 Day 18 (--/--).
