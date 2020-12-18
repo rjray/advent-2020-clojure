@@ -170,7 +170,7 @@ Both my search-based approach and this one have the same drawback, however: it w
 
 ## [day18.clj](day18.clj)
 
-Day 18 (--/--).
+Day 18 (4555/3364, approx. 1 hour 44 minutes). I sucked at this one, totally bombed it and had to look at other solutions to get it right. The only bright-side is that thanks to Vincent Cantin (again) I know have some exposure to `clojure.edn` and `clojure.walk`. That's all I want to say for now.
 
 ## [day19.clj](day19.clj)
 
