@@ -174,7 +174,9 @@ Day 18 (4555/3364, approx. 1 hour 44 minutes). I sucked at this one, totally bom
 
 ## [day19.clj](day19.clj)
 
-Day 19 (--/--).
+Day 19 (1662/793, approx. 1 hour 8 minutes). Holy crap, I broke the top-1000 for the second half of this. This is because the Clojure library I used ([Instaparse](https://github.com/Engelberg/instaparse)) was not deterred by the caveats of part 2.
+
+My approach was basically to transform the rules as given in the input into a grammar that Instaparse could understand. From that, most of the rest just fell into place. Might clean this up a little and write more tomorrow.
 
 ## [day20.clj](day20.clj)
 

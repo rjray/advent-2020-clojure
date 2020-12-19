@@ -10,11 +10,11 @@ The `test` directory contains unit tests. I'm experimenting with these for the f
 
 ## Stats
 
-Number of answers correct on first submission: 33/36 (91.67%)
+Number of answers correct on first submission: 35/38 (92.11%)
 
-Highest finish for first half: 2433 (day 17)
+Highest finish for first half: 1662 (day 19)
 
-Highest finish for second half: 2144 (day 13)
+Highest finish for second half: 793 (day 19)
 
 ## Usage
 
