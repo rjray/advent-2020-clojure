@@ -6,6 +6,7 @@
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/math.numeric-tower "0.0.4"]
                  [org.clojure/math.combinatorics "0.1.6"]
+                 [instaparse "1.4.10"]
                  [criterium "0.4.6"]]
   :plugins [[lein-kibit "0.1.8"]]
   :main advent-of-code.core
