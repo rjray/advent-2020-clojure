@@ -178,6 +178,12 @@ Day 19 (1662/793, approx. 1 hour 8 minutes). Holy crap, I broke the top-1000 for
 
 My approach was basically to transform the rules as given in the input into a grammar that Instaparse could understand. From that, most of the rest just fell into place. Might clean this up a little and write more tomorrow.
 
+## [day19bis.clj](day19bis.clj)
+
+This feels almost like cheating at optimization. Because the only real change I've made is that the Instaparse library did not in fact need me to massage the grammar rules. It was able to parse them at face-value, needing only `:start` and `:0` keywords to tell the parser that the starting rule's label is `0`. I also changed how the grammar is updated for part 2 to something more succinct and efficient that someone on the Clojure Slack suggested (my first exposure to the `reduce-kv` primitive).
+
+This doesn't speed up the run-time at all, really. But it makes the code more concise.
+
 ## [day20.clj](day20.clj)
 
 Day 20 (--/--).

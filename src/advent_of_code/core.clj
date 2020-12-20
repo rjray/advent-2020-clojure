@@ -28,6 +28,7 @@
             [advent-of-code.day17bis]
             [advent-of-code.day18]
             [advent-of-code.day19]
+            [advent-of-code.day19bis]
             [advent-of-code.day20]
             [advent-of-code.day21]
             [advent-of-code.day22]
@@ -123,6 +124,10 @@
     "d18.p2" (println (advent-of-code.day18/part-2 (read-input "day18.txt")))
     "d19.p1" (println (advent-of-code.day19/part-1 (read-input "day19.txt")))
     "d19.p2" (println (advent-of-code.day19/part-2 (read-input "day19.txt")))
+    "d19bis.p1" (println (advent-of-code.day19bis/part-1
+                          (read-input "day19.txt")))
+    "d19bis.p2" (println (advent-of-code.day19bis/part-2
+                          (read-input "day19.txt")))
     "d20.p1" (println (advent-of-code.day20/part-1 (read-input "day20.txt")))
     "d20.p2" (println (advent-of-code.day20/part-2 (read-input "day20.txt")))
     "d21.p1" (println (advent-of-code.day21/part-1 (read-input "day21.txt")))
