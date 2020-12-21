@@ -186,7 +186,7 @@ This doesn't speed up the run-time at all, really. But it makes the code more co
 
 ## [day20.clj](day20.clj)
 
-Day 20 (--/--).
+Day 20 (--/--). Day 20 is not complete. Part 2 is killing me. Will come back to it.
 
 ## [day21.clj](day21.clj)
 

@@ -4,9 +4,9 @@
             [clojure.java.io :refer [resource]]))
 
 (deftest part1
-  (let [expected nil]
+  (let [expected 20899048083289]
     (is (= expected (part-1 (slurp (resource "day20-example.txt")))))))
 
 (deftest part2
-  (let [expected nil]
+  (let [expected 273]
     (is (= expected (part-2 (slurp (resource "day20-example.txt")))))))
