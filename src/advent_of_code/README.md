@@ -190,7 +190,7 @@ Day 20 (--/--). Day 20 is not complete. Part 2 is killing me. Will come back to 
 
 ## [day21.clj](day21.clj)
 
-Day 21 (--/--).
+Day 21 (1796/2155, approx. 1 hour 9 minutes). This was a breeze compared to day 20. Part 1 was a lot of set operations, and part 2 was similar to a search problems from an earlier day. Tired and burned out, so that's all for now.
 
 ## [day22.clj](day22.clj)
 
