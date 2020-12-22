@@ -200,7 +200,7 @@ Day 21 (1796/2155, approx. 1 hour 9 minutes). This was a breeze compared to day 
 
 ## [day22.clj](day22.clj)
 
-Day 22 (2545/1470, approx. 54 minutes). Now, *this* was a pair of puzzles for which CLojure is eminently ideal. The ability to mix tail-recursion with standard recursion, all while keep your data structures safely intact, meant that I finished both in under an hour.
+Day 22 (2545/1470, approx. 54 minutes). Now, *this* was a set of puzzles for which Clojure is eminently ideal. The ability to mix tail-recursion with standard recursion, all while keep your data structures safely intact, meant that I finished both in under an hour.
 
 Part 1 was very simple. Took me 19 minutes, most of which was double-checking basic Clojure keywords (I have **GOT** to get better at this language). Using a `loop` form and `recur` was all that was needed. There's no real trick to it, he saved that for part 2.
 
