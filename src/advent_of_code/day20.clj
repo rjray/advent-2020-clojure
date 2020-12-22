@@ -1,7 +1,6 @@
 (ns advent-of-code.day20
   (:require [clojure.string :as str]
-            [clojure.set :as set]
-            [clojure.math.combinatorics :as comb]))
+            [clojure.set :as set]))
 
 (defn- get-input [func input]
   (-> input
@@ -11,12 +10,10 @@
 (defn- parse-tile [block]
   (let [[header & lines] (str/split-lines block)
         id               (Integer/parseInt (first (re-seq #"\d+" header)))]
-    (list id (vec lines))))
+    [id (vec lines)]))
 
 (defn- parse-data [blocks]
-  (reduce (fn [data block]
-            (apply assoc data (parse-tile block)))
-          {} blocks))
+  (into {} (map parse-tile blocks)))
 
 (defn- to-int [v]
   (Integer/parseInt (str/join (map {\# \1, \. \0} v)) 2))
@@ -67,34 +64,28 @@
        (reduce *)))
 
 (defn- flip [tile]
-  (mapv #(vec (reverse %)) tile))
+  (mapv #(str/join (reverse %)) tile))
 
 (defn- rotate [times tile]
-  (let [dim  (count tile)
-        tile (mapv vec tile)]
-    (mapv #(str/join %)
-          (reduce (fn [tile _]
-                    (mapv #(vec (reverse %))
-                          (reduce (fn [t xy]
-                                    (assoc-in (assoc-in t (reverse xy)
-                                                        (get-in t xy))
-                                              xy (get-in t (reverse xy))))
-                                  tile (for [x (range dim), y (range dim)
-                                             :when (< y x)]
-                                         [x y]))))
-                  tile (range times)))))
+  (let [dim (count tile)]
+    (reduce (fn [tile _]
+              (->> (for [x (range dim), y (range dim)]
+                     (get-in tile [(- dim y 1) x]))
+                   (partition dim)
+                   (mapv str/join)))
+            tile (range times))))
 
 (defn- transform [tile which]
   (case which
     (0 1 2 3) (rotate which tile)
-    (4 5 6 7) (flip (rotate (rem which 4) tile))))
+    (4 5 6 7) (flip (rotate (mod which 4) tile))))
 
 (defn- remove-borders [tile]
   (let [lines (rest (butlast tile))]
-    (mapv #(vec (rest (butlast %))) lines)))
+    (mapv #(str/join (rest (butlast %))) lines)))
 
 (defn- neighbors [cur idx dim]
-  (if (zero? (mod idx 3))
+  (if (zero? (mod idx dim))
     (list (cur (- idx dim)))
     (map #(cur %) (filter #(<= 0 %) [(dec idx) (- idx dim)]))))
 
@@ -117,36 +108,32 @@
   (let [[N E S W N' E' S' W'] edges]
     (side (zipmap (list :north :east :south :west)
                   (case orient
-                    0 [N E S W]
-                    1 [W N E S]
-                    2 [S W N E]
-                    3 [E S W N]
-                    4 [N' W S' E]
-                    5 [W' S E' N]
-                    6 [S' E N' W]
-                    7 [E' N W' S])))))
+                    0 [N  E  S  W]
+                    1 [W' N  E' S]
+                    2 [S' W' N' E']
+                    3 [E  S' W  N']
+                    4 [N' W  S' E]
+                    5 [W  S  E  N]
+                    6 [S  E' N  W']
+                    7 [E' N' W' S'])))))
 
-(defn- find-orientation [tile edges side val]
+(defn- find-orientation [edges side val]
   (let [side->orient (mapv #(get-orient-val % side edges) (range 8))]
-    (prn tile side side->orient)
     (first (filter #(= (side->orient %) val) (range 8)))))
 
 (defn- try-orientation [imap edges size dim orient]
-  (prn "try-orientation" orient)
   (loop [sol [(list (imap 0) orient)], idx 1]
-    (prn sol idx)
-    (case idx
-      size sol
+    (cond
+      (= idx size) sol
+      :else
       (let [tile        (imap idx)
             match-to    (connection idx dim sol)
-            _ (prn match-to)
             edgeval     (get-orient-val (last (:match match-to))
                                         (:match-at match-to)
                                         (edges (first (:match match-to))))
-            _ (prn edgeval)
-            orientation (find-orientation tile (edges tile)
-                                          (:match-to match-to) edgeval)
-            _ (prn orientation)]
+            orientation (find-orientation (edges tile)
+                                          (:match-to match-to)
+                                          edgeval)]
         (case orientation
           nil nil
           (recur (conj sol (list tile orientation)) (inc idx)))))))
@@ -154,8 +141,9 @@
 (defn- attach-orientations [imagemap edgelists]
   (let [size (count imagemap)
         dim  (int (Math/sqrt size))]
-    (first (filter #(vector? (try-orientation imagemap edgelists size dim %))
-                   (range 8)))))
+    (first (filter vector?
+                   (map #(try-orientation imagemap edgelists size dim %)
+                        (range 8))))))
 
 (defn- find-image-2 [sol choices alltiles edges size dim]
   (cond
@@ -164,9 +152,7 @@
     :else
     (let [current    (last sol)
           must-match (neighbors sol (count sol) dim)
-          _ (prn (count sol) must-match sol)
-          candidates (filter #(linkable? must-match % edges) choices)
-          _ (prn candidates)]
+          candidates (filter #(linkable? must-match % edges) choices)]
       (loop [[c & candidates] candidates]
         (cond
           (nil? c) nil
