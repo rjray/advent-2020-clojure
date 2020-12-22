@@ -186,7 +186,7 @@ This doesn't speed up the run-time at all, really. But it makes the code more co
 
 ## [day20.clj](day20.clj)
 
-Day 20 (2392/--). For this one, I took a shortcut from a clue that yielded a very quick answer for part 1. And code that was almost completely useless for part 2.
+Day 20 (2392/8653). For this one, I took a shortcut from a clue that yielded a very quick answer for part 1. And code that was almost completely useless for part 2.
 
 For part 1, I converted the sides of the tiles to integer numbers and used those in sets to determine how many of the edges appeared only once. The four tiles that would have two singles out of their four sides were the corners. Order didn't matter, so no problem.
 
