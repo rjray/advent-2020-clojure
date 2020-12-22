@@ -190,7 +190,7 @@ Day 20 (2392/--). For this one, I took a shortcut from a clue that yielded a ver
 
 For part 1, I converted the sides of the tiles to integer numbers and used those in sets to determine how many of the edges appeared only once. The four tiles that would have two singles out of their four sides were the corners. Order didn't matter, so no problem.
 
-But for part 2, it was necessary to actually assemble the map correctly, and search for "monsters" in one of the eight possible orientations of the final map. This is where I basically ate shit. Holding on to the numerical representation of sides, I ended up struggling with several aspects of the solution. When I was finally able to assemble the tiles in the proper order, I was unable to get the orientation of each individual tile correct. Why? Because I had misinterpreted the way to represent each orientation in terms of the numerical values of the sides. I finally wrote some additional code that took the known eight side-values (each of four sides forwards and backwards) and each of the eight orientations, and spit out the 4-tuple that I needed for each orientation. After that, I was able to getthe correct answer for the test data. However, I botched the first submission of the part 2 answer because of a stringification bug that hadn't manifested in the test data.
+But for part 2, it was necessary to actually assemble the map correctly, and search for "monsters" in one of the eight possible orientations of the final map. This is where I basically ate shit. Holding on to the numerical representation of sides, I ended up struggling with several aspects of the solution. When I was finally able to assemble the tiles in the proper order, I was unable to get the orientation of each individual tile correct. Why? Because I had misinterpreted the way to represent each orientation in terms of the numerical values of the sides. I finally wrote some additional code that took the known eight side-values (each of four sides forwards and backwards) and each of the eight orientations, and spit out the 4-tuple that I needed for each orientation. After that, I was able to get the correct answer for the test data. However, I botched the first submission of the part 2 answer because of a stringification bug that hadn't manifested in the test data.
 
 I might be able to improve this code, but I have no desire to look at it again any time soon.
 
@@ -200,7 +200,11 @@ Day 21 (1796/2155, approx. 1 hour 9 minutes). This was a breeze compared to day 
 
 ## [day22.clj](day22.clj)
 
-Day 22 (--/--).
+Day 22 (2545/1470, approx. 54 minutes). Now, *this* was a pair of puzzles for which CLojure is eminently ideal. The ability to mix tail-recursion with standard recursion, all while keep your data structures safely intact, meant that I finished both in under an hour.
+
+Part 1 was very simple. Took me 19 minutes, most of which was double-checking basic Clojure keywords (I have **GOT** to get better at this language). Using a `loop` form and `recur` was all that was needed. There's no real trick to it, he saved that for part 2.
+
+For part 2, the card game became recursive. This was a little bit of a struggle at first, hence the 35 minutes needed. The tricky part was integrating a standard recursive call into the tail-recursive loop-flow. Clojure's sets took care of the infinite-loop detection. Literally the only debugging on part 2 was due to trying to re-use the scoring function from part 1. Which I did in the end, but it needed a wrapper in order to work.
 
 ## [day23.clj](day23.clj)
 
