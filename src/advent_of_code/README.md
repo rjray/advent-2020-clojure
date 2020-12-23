@@ -206,6 +206,10 @@ Part 1 was very simple. Took me 19 minutes, most of which was double-checking ba
 
 For part 2, the card game became recursive. This was a little bit of a struggle at first, hence the 35 minutes needed. The tricky part was integrating a standard recursive call into the tail-recursive loop-flow. Clojure's sets took care of the infinite-loop detection. Literally the only debugging on part 2 was due to trying to re-use the scoring function from part 1. Which I did in the end, but it needed a wrapper in order to work.
 
+## [day22bis.clj](day22bis.clj)
+
+I hadn't planned on revisiting this one, but I saw some parts of other Clojure solutions and felt I could at least shorten it. Which I did, from 78 lines to 56. None of the changes speed it up, though, but that's fine. Some used different underlying data structures for the card decks that perform faster. I was most pleased to note that the algorithm I used is almost identical to the one Aleksandr Zhuravlёv (zelark) used. So I must be learning *something* through all of this.
+
 ## [day23.clj](day23.clj)
 
 Day 23 (--/--).
