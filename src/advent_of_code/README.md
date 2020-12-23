@@ -212,7 +212,7 @@ I hadn't planned on revisiting this one, but I saw some parts of other Clojure s
 
 ## [day23.clj](day23.clj)
 
-Day 23 (--/--).
+Day 23 (1718/2249, approx. 3 hours 8 minutes). Another day, another wrong submission. This time because I ran it on the test data and submitted that as the answer. Also, I had a "magic number" in my algorithm again that cost me a fair amount of debugging time. Overall, the second part was just a bear to do in Clojure. More later; I'll definitely be rewriting this code tomorrow.
 
 ## [day24.clj](day24.clj)
 
