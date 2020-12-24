@@ -214,6 +214,10 @@ I hadn't planned on revisiting this one, but I saw some parts of other Clojure s
 
 Day 23 (1718/2249, approx. 3 hours 8 minutes). Another day, another wrong submission. This time because I ran it on the test data and submitted that as the answer. Also, I had a "magic number" in my algorithm again that cost me a fair amount of debugging time. Overall, the second part was just a bear to do in Clojure. More later; I'll definitely be rewriting this code tomorrow.
 
+## [day23bis.clj](day23bis.clj)
+
+Interesting, this. I first set out to shorten the code, since I figured out how to use the part 2 algorithm to solve part 1 as well. That went well-- I trimmed out 31 of 99 lines. Then, based on some chatter on the Clojure slack I decided to replace the use of a vector as the underlying store with an `int-array`, which is a native Java array of ints. I had some problems, but eventually got part 1 working. So I ran part 2 and waited. And waited. Somehow, I went from a run-time of 32 seconds to a run-time of 26 minutes and 20 seconds. I have no idea what I did wrong to cause that to happen. I just backed everything out for now. This version committed is the 32-second one.
+
 ## [day24.clj](day24.clj)
 
 Day 24 (--/--).
