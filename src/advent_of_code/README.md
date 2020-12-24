@@ -220,7 +220,11 @@ Interesting, this. I first set out to shorten the code, since I figured out how 
 
 ## [day24.clj](day24.clj)
 
-Day 24 (--/--).
+Day 24 (2205/1839, approx. 1 hour 3 minutes). A respectable showing for day 24. Despite being rather harder, I finished part 2 in less time than I had taken for part 1.
+
+For part 1, you just had to implement a hexagonal-grid system and process some simple directional instructions to flip tiles between white and black. Some REPL weirdness slowed me down here; testing my function for parsing the input repeatedly failed due to an error with `Integer/parseInt`... except that I wasn't calling that function. Then it simply started working. I have no idea why or how. But I got the right answer.
+
+For part 2... how about Conway's Game of Life on a hex grid? Thankfully, the algorithm I learned on day 17 from Zhuravlёv (zelark) worked just as well here, with some adjustments to make sure tiles that hadn't been seen before defaulted to white. 27 minutes later and I had the right answer.
 
 ## [day25.clj](day25.clj)
 
