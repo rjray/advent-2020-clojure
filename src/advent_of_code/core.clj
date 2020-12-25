@@ -149,6 +149,5 @@
     "d24.p1" (println (advent-of-code.day24/part-1 (read-input "day24.txt")))
     "d24.p2" (println (advent-of-code.day24/part-2 (read-input "day24.txt")))
     "d25.p1" (println (advent-of-code.day25/part-1 (read-input "day25.txt")))
-    "d25.p2" (println (advent-of-code.day25/part-2 (read-input "day25.txt")))
     (println "not found")))
 

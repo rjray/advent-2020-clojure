@@ -228,4 +228,4 @@ For part 2... how about Conway's Game of Life on a hex grid? Thankfully, the alg
 
 ## [day25.clj](day25.clj)
 
-Day 25 (--/--).
+Day 25 (1915/1613, approx. 25 minutes). Well, that's all for this year. As is usual, there was no part 2, just a reward for having all of the previous 49 stars. Part 1 was a surprisingly simple encryption simulation. It took me longer to understand the instructions than it did to solve it.
