@@ -1,6 +1,5 @@
 (ns advent-of-code.day24
-  (:require [clojure.string :as str]
-            ))
+  (:require [clojure.string :as str]))
 
 (defn- get-input [func input]
   (->> input
