@@ -45,21 +45,21 @@ I learned a great deal from several of the coders I talked to on slack, but thes
 My take-aways from this year (for when I can return to AoC) are:
 
 1. I need better templates to work with. I told myself this last year but never got around to it. I used Mitchell Hanburg's starter as a basis for my own, but I can see a lot of areas in which I can put my own spin on it to better suit my style:
-  1. Either extend the unit-test elements or drop them. They didn't prove useful and the command to run each (`lein test path/to/file.clj`) was just too much typing when in a hurry. It was faster to just have the example input loaded into a `def` in the REPL.
-  1. More abstractions for input parsing, based on past experiences. This is also linked to the next (top-level) point, but I did spent too much time each day repeating stuff that could/should have been in the templates I was using.
-  1. Make the [advent-clojure-basis](https://github.com/rjray/advent-clojure-basis) repository work as a template, so that I can start off new years with less up-front tweaking.
+   1. Either extend the unit-test elements or drop them. They didn't prove useful and the command to run each (`lein test path/to/file.clj`) was just too much typing when in a hurry. It was faster to just have the example input loaded into a `def` in the REPL.
+   1. More abstractions for input parsing, based on past experiences. This is also linked to the next (top-level) point, but I did spent too much time each day repeating stuff that could/should have been in the templates I was using.
+   1. Make the [advent-clojure-basis](https://github.com/rjray/advent-clojure-basis) repository work as a template, so that I can start off new years with less up-front tweaking.
 1. Desperately need some utils-code written, in particular around the reading/parsing of the input data.
-  1. The starter that I based mine on covers this partially, in that it places all the input data files under the `resources` directory and reads them as such. Then it provides a `-main` fn that handles calling a given day/part, feeding it the input already read in via `slurp`.
-  1. To this I should add common cases, including: breaking into lines, breaking into blocks (using `\n\n` as a split-separator), lines of integers, etc.
-  1. One useful pattern I adopted from someone else, was to have a generic `parse-input` that takes both the input and a fn, splits the input into lines and feeds them to the given function. Might be a way to extend this even more with `comp`, maybe?
-  1. Get some basic stuff in as well, such as:
-    1. Defining/manipulating coordinate systems (2D, hexagonal)
-    1. Basic searching (A*, etc.)
-    1. ASCII-art-based operations (parsing, rotation, etc.)
+   1. The starter that I based mine on covers this partially, in that it places all the input data files under the `resources` directory and reads them as such. Then it provides a `-main` fn that handles calling a given day/part, feeding it the input already read in via `slurp`.
+   1. To this I should add common cases, including: breaking into lines, breaking into blocks (using `\n\n` as a split-separator), lines of integers, etc.
+   1. One useful pattern I adopted from someone else, was to have a generic `parse-input` that takes both the input and a fn, splits the input into lines and feeds them to the given function. Might be a way to extend this even more with `comp`, maybe?
+   1. Get some basic stuff in as well, such as:
+      1. Defining/manipulating coordinate systems (2D, hexagonal)
+      1. Basic searching (A*, etc.)
+      1. ASCII-art-based operations (parsing, rotation, etc.)
 1. Lastly, I need to use Clojure more during the year.
-  1. I spent far too much time looking up basic functions for their arguments' type and/or order.
-  1. I made certain mistakes too often (like `(cons list value)` instead of `(cons value list)`).
-  1. There are still a *lot* of Clojure keywords I don't even know because I haven't used them before (not to mention the ones that I don't even know that I don't know).
+   1. I spent far too much time looking up basic functions for their arguments' type and/or order.
+   1. I made certain mistakes too often (like `(cons list value)` instead of `(cons value list)`).
+   1. There are still a *lot* of Clojure keywords I don't even know because I haven't used them before (not to mention the ones that I don't even know that I don't know).
 
 ## Credits
 
